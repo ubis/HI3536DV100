@@ -17,6 +17,9 @@ I have dumped the original firmware. You can find mtd block sizes in here as wel
 
 Due some miracle, I was able to retrieve the SDK for this device. It contains kernel, uboot and a few kernel modules sources, many development tutorials regarding the board and it's peripherals and H265/264 library development.
 
+https://mega.nz/#!fegnnCJb!91KLL77uYPvLu-luCYXqPn1txlih-sc-qg0VPm976Lw
+https://mega.nz/#!Sfhk3ASS!eTDEElTqV3Glpv9BgOHIsUMXFwjvoVjv7st77Joe5vI
+
 # Obtaining root
 
 It seems that manufacturer patched the available backdoors so the only way to obtain root at the moment is through UART and flashing modified rootfs. On my device, EARLY_PRINTK kernel option is disabled so I don't get any bootup messages after kernel has been started nor received tty console over UART.
