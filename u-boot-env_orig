@@ -1,0 +1,31 @@
+silicon # printenv
+bootcmd=sf probe 0;sf read 0x84000000 0xf60000 0x20000;logoload 0x84000000;decjpg;sf read 0x82000000 0x50000 0x500000;squashfsload 82000000;bootm 0x81000000
+bootdelay=1
+baudrate=115200
+ethaddr=00:0b:3f:00:00:01
+bootfile="uImage"
+da=mw.b 0x82000000 ff 1000000;tftp 0x82000000 u-boot.bin.img;sf probe 0;flwrite
+du=mw.b 0x82000000 ff 1000000;tftp 0x82000000 user-x.cramfs.img;sf probe 0;flwrite
+dr=mw.b 0x82000000 ff 1000000;tftp 0x82000000 romfs-x.cramfs.img;sf probe 0;flwrite
+dw=mw.b 0x82000000 ff 1000000;tftp 0x82000000 web-x.cramfs.img;sf probe 0;flwrite
+dl=mw.b 0x82000000 ff 1000000;tftp 0x82000000 logo-x.cramfs.img;sf probe 0;flwrite
+dc=mw.b 0x82000000 ff 1000000;tftp 0x82000000 custom-x.cramfs.img;sf probe 0;flwrite
+up=mw.b 0x82000000 ff 1000000;tftp 0x82000000 update.img;sf probe 0;flwrite
+tk=mw.b 0x82000000 ff 1000000;tftp 0x82000000 zImage.img; bootm 0x82000000
+dd=mw.b 0x82000000 ff 1000000;tftp 0x82000000 mtd-x.jffs2.img;sf probe 0;flwrite
+appVideoStandard=PAL
+appSystemLanguage=English
+bootargs=mem=83M console=ttyAMA0,115200 root=/dev/mtdblock1 rootfstype=squashfs mtdparts=hi_sfc:320K(boot),3968K(romfs),7040K(usr),1600K(web),2816K(custom),128K(logo),512K(mtd) coherent_pool=2M
+stdin=serial
+stdout=serial
+stderr=serial
+verify=n
+ver=U-Boot 2010.06-svn880 (Mar 22 2018 - 10:21:19)
+filesize=11A9CA
+fileaddr=82000000
+gatewayip=192.168.0.1
+netmask=255.255.255.0
+ipaddr=192.168.1.10
+serverip=192.168.1.183
+
+Environment size: 1423/65532 bytes
