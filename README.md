@@ -46,3 +46,5 @@ Currently, only required patches are added to the target - CPU support and SPI-N
 My plan is to make OpenWRT fully supported, then use something like https://shinobi.video/ NVR software solution. Although the latter contains too much bloat - running on NodeJS, which is overkill for my 16MB flash. Probably I will rewrite it in C, after all, it's main component is ffmpeg.
  
 I don't believe that video motion detection is done on the NVR device, since it doesn't have such powerful CPU. I think it's done on the each camera, if configured. This way it would make sense how such tiny NVR could handle up to 1080p 8 channel IP cameras. So I don't have any plans to implement motion detection on the NVR, because of not enough power.
+
+Now regarding kernel modules... Some of them are published with source in the SDK, some aren't. I have tried to reverse-engineer one of the modules and it seems it can be done, since those modules doesn't contain complex stuff. However, this is not my main priority, because NVR runs fine without modules right now. I might come back to this once I'll done porting OpenWRT.
