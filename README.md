@@ -6,7 +6,7 @@ I have Techage N6708G5 8 Channel PoE NVR which uses HI3536DV100 SoC. I'm publish
 
 * CPU - HI3536DV100 single core ARM Cortex-A7 850MHz;
 * RAM - 128MB DDR3, although original firmware boots with 83M;
-* FLASH - Winbond 25q128 SPI-NOR 16MB;
+* FLASH - Winbond w25q128 SPI-NOR 16MB;
 * Switch - 8+1 Channel PoE switch
 
 # Original firmware
