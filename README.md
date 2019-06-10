@@ -1,0 +1,2 @@
+# HI3536DV100
+HI3536DV100 SoC based Techage N6708G5 NVR hacking
