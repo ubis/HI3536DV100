@@ -1,0 +1,202 @@
+Booting Linux on physical CPU 0x0
+Linux version 4.9.37 (chenwenrong@xm-5) (gcc version 6.2.1 20161016 (Hisilicon_v510_20171111) ) #2 Sat Feb 24 11:23:01 CST 2018
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Hisilicon HI3536DV100 DEMO Board
+Memory policy: Data cache writeback
+On node 0 totalpages: 21248
+free_area_init_node: node 0, pgdat c0709828, node_mem_map c524f000
+  Normal zone: 166 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 21248 pages, LIFO batch:3
+CPU: All CPU(s) started in SVC mode.
+pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+pcpu-alloc: [0] 0
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 21082
+Kernel command line: mem=83M console=ttyAMA0,115200 root=/dev/mtdblock1 rootfstype=squashfs mtdparts=hi_sfc:320K(boot),3968K(romfs),7040K(usr),1600K(web),2816K(custom),128K(logo),512K(mtd) coherent_pool=2M
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 76640K/84992K available (5552K kernel code, 167K rwdata, 1260K rodata, 188K init, 272K bss, 8352K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc5800000 - 0xff800000   ( 928 MB)
+    lowmem  : 0xc0000000 - 0xc5300000   (  83 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0574288   (5553 kB)
+      .init : 0xc06b1000 - 0xc06e0000   ( 188 kB)
+      .data : 0xc06e0000 - 0xc0709ee0   ( 168 kB)
+       .bss : 0xc070b000 - 0xc074f040   ( 273 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:16 nr_irqs:16 16
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 1699.02 BogoMIPS (lpj=8495104)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80008200 - 0x80008258
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 2048 KiB pool for atomic coherent allocations
+Serial: AMBA PL011 UART driver
+12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 18, base_baud = 0) is a PL011 rev2
+uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 19, base_baud = 0) is a PL011 rev2
+SCSI subsystem initialized
+libata version 3.00 loaded.
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+clocksource: Switched to clocksource arm,sp804
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=30 max_order=15 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/O].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+pinctrl-single 120f0000.pinmux: 234 pins at pa fe1f0000 size 936
+brd: module loaded
+ahci 10030000.sata: SSS flag set, parallel bus scan disabled
+ahci 10030000.sata: AHCI 0001.0300 32 slots 1 ports 6 Gbps 0x1 impl platform mode
+ahci 10030000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh
+scsi host0: ahci
+ata1: SATA max UDMA/133 mmio [mem 0x10030000-0x10030fff] port 0x100 irq 20
+at xm_select_FlashProtMgr() index:0x1,name:Winbond,chipSize:0x1000000.<<INFO>>
+at xm_setTB() g_SpiNorMFR:0xef,chipsize:0x1000000 <No>.
+hisi-sfc hisi_spi_nor.0: lk=>6, 0x800000.
+hisi-sfc hisi_spi_nor.0: w25q128 (16384 Kbytes)
+7 cmdlinepart partitions found on MTD device hi_sfc
+at XMMtd_RegisterProtFreeRgn() index:0,offset:0xf80000,size:0x80000.
+Creating 7 MTD partitions on "hi_sfc":
+0x000000000000-0x000000050000 : "boot"
+0x000000050000-0x000000430000 : "romfs"
+0x000000430000-0x000000b10000 : "usr"
+0x000000b10000-0x000000ca0000 : "web"
+0x000000ca0000-0x000000f60000 : "custom"
+0x000000f60000-0x000000f80000 : "logo"
+0x000000f80000-0x000001000000 : "mtd"
+FEPHY:addr=1, la_am=0xd, ldo_am=0x4, r_tuning=0x1b
+libphy: hisi_femac_mii_bus: probed
+libphy: Fixed MDIO Bus: probed
+ata1: SATA link down (SStatus 0 SControl 300)
+Generic PHY 10011100.mdio:01: attached PHY driver [Generic PHY] (mii_bus:phy_addr=10011100.mdio:01, irq=-1)
+phy_id=0x20669901, phy_mode=mii
+hisi-femac 10010000.ethernet: using random MAC address 1e:c2:92:26:10:20
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver zd1201
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-platform: EHCI generic platform driver
+ehci-platform 11010000.ehci: EHCI Host Controller
+ehci-platform 11010000.ehci: new USB bus registered, assigned bus number 1
+ehci-platform 11010000.ehci: irq 22, io mem 0x11010000
+ehci-platform 11010000.ehci: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform: OHCI generic platform driver
+ohci-platform 11000000.ohci: Generic Platform OHCI controller
+ohci-platform 11000000.ohci: new USB bus registered, assigned bus number 2
+ohci-platform 11000000.ohci: irq 23, io mem 0x11000000
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 2 ports detected
+mousedev: PS/2 mouse device common for all mice
+hibvt_rtc 120b0000.rtc: rtc core: registered 120b0000.rtc as rtc0
+hibvt_rtc 120b0000.rtc: RTC driver for hibvt enabled
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Key type dns_resolver registered
+PM: Hibernation image not present or could not be loaded.
+Warning: unable to open an initial console.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:1.
+Freeing unused kernel memory: 188K (c06b1000 - c06e0000)
+This architecture does not have kernel memory protection.
+random: sleep: uninitialized urandom read (4 bytes read)
+random: fast init done
+sys_config: loading out-of-tree module taints kernel.
+load sys_config.ko for ...OK!
+Module himedia: init ok
+Hisilicon Media Memory Zone Manager
+hi_osal 1.0 init success!
+hi3536dv100_base: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+load base.ko ... OK!
+load sys.ko ...OK!
+load vdec.ko ....OK!
+load vdh firmware.ko OK
+load vgs.ko ...OK!
+load vpss.ko ...OK!
+load vou.ko OK!
+load hifb.ko OK!
+load hdmi.ko OK!
+load chnl.ko ...OK!
+at24c16
+:
+========================================================
+at24c16
+:
+Driver Version=20150126 DateTime=Oct 26 2017-18:57:07.
+at24c16
+:
+Driver for HISI3535 Linux 4.9.37 .
+ ===============================================================
+| AT24C16: SVN:54,Compiled by shaoweidong at Oct 26 2017 18:57:07 |
+ ===============================================================
+gpio_i2c_wread_24c16 0x33:d2
+gpio_i2c_read_24c16 0x34:d4
+at24c16 driver init start ...
+fvideo driver init successful!
+Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+ ===============================================================
+| HIWDT: SVN:43,Compiled by shaoweidong at Feb 23 2018 18:57:44 |
+ ===============================================================
+HISI_IRDA-MF @Hi3520Dv100R00
+ ===============================================================
+| HIIR: SVN:49,Compiled by shaoweidong at Oct 23 2017 19:09:01 |
+ ===============================================================
+hiir: init ok. ver=Oct 23 2017, 19:09:01.
+usbcore: registered new interface driver usb-storage
+load aio.ko OK!
+load ao.ko OK!
+load adec.ko OK!
+load acodec.ko OK!
