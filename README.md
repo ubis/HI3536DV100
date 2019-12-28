@@ -38,7 +38,7 @@ For UART, you need to do some soldering. I have added the similar picture of my 
 
 Once root has been obtained I have found out that the switch ports are not isolated, meaning I can't cut off IP camera's traffic even if I install clean linux image on the NVR. It's possible to do some VLAN tagging/isolating, but it needs external re-wiring from PHY device to the HiSi CPU through I2C and writing driver for it. I doubt I will ever tinker with this. One solution I could see is using usb-to-ethernet adapter.
 
-Overall there's nothing much to say about security, it's Chinese software, it's full of bloat/possible malware and unwanted traffic back to homeland (that's why I want to isolate the IP camera's traffic). The NVR runs on 4.9.36 kernel which isn't that old, but still.
+Overall there's nothing much to say about security, it's Chinese software, it's full of bloat/possible malware and unwanted traffic back to homeland (that's why I want to isolate the IP camera's traffic). The NVR runs on 4.9.37 kernel which isn't that old, but still.
 
 # Custom Linux firmware
 
