@@ -42,12 +42,13 @@ Overall there's nothing much to say about security, it's Chinese software, it's 
 
 # Custom Linux firmware
 
-In progress with OpenWRT 18.06 porting. Sources are in https://github.com/ubis/openwrt/tree/feature/add-hisi35xx-target/target/linux/hisilicon
+Most of the work is done for OpenWrt 18.06 Hisilicon HI3536DV100 CPU support. Please see https://github.com/ubis/openwrt/tree/feature/add-hisi35xx-target/target/linux/hisilicon and https://github.com/ubis/openwrt/pull/1
 
-Currently, only required patches are added to the target - CPU support and SPI-NOR support. Bootable with or without initramfs. At the moment, staying on the latest OpenWRT supported 4.9.x kernel. Will switch to 4.14 probably once other patches will be done.
+Most hardware is supported and working: Ethernet, SATA, USB, SPI NAND, GPIO(untested), except D-SUB/HDMI/Audio Out. Latter ones are enabled by probing proprietary linux kernel 4.9.37 modules. I do not have sources for them, and OpenWrt 18.06 (as of now 2019-12-28) is using 4.9.207 kernel.
 
-My plan is to make OpenWRT fully supported, then use something like https://shinobi.video/ NVR software solution. Although the latter contains too much bloat - running on NodeJS, which is overkill for my 16MB flash. Probably I will rewrite it in C, after all, it's main component is ffmpeg.
- 
-I don't believe that video motion detection is done on the NVR device, since it doesn't have such powerful CPU. I think it's done on the each camera, if configured. This way it would make sense how such tiny NVR could handle up to 1080p 8 channel IP cameras. So I don't have any plans to implement motion detection on the NVR, because of not enough power.
+I had plans to fully replace NVR software with OpenWrt & some open source solution, but that seems to be not ideal solution for now.
 
-Now regarding kernel modules... Some of them are published with source in the SDK, some aren't. I have tried to reverse-engineer one of the modules and it seems it can be done, since those modules doesn't contain complex stuff. However, this is not my main priority, because NVR runs fine without modules right now. I might come back to this once I'll done porting OpenWRT.
+The reason behind that is mostly motion detection. It requires a right amount of hardware to do, if done on software side. However, these Hisilicon IP Cameras have dedicated hardware for that to reduce CPU usage when doing motion detection. At first I thought that motion detection is configured with ONVIF, since it is supported. Unfortunately once I dig into it further, detection is configured using proprietary protocol and only alarms/triggers are sent by ONVIF messages.
+
+As of now, I see this solution suitable: hook up small ARM board(RPI-like) with dual Ethernet support(could use even usb-ethernet). Fully isolate NVR and it's cameras. Then build rtsp-http streaming service on that ARM board and expose it for further uses. This prevents anything from going out of NVR stuff and only stream is passed.
+I could even build a ONVIF client reader on the ARM board and configure it to send email/do something else on trigger event.
