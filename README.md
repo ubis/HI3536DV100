@@ -52,3 +52,11 @@ The reason behind that is mostly motion detection. It requires a right amount of
 
 As of now, I see this solution suitable: hook up small ARM board(RPI-like) with dual Ethernet support(could use even usb-ethernet). Fully isolate NVR and it's cameras. Then build rtsp-http streaming service on that ARM board and expose it for further uses. This prevents anything from going out of NVR stuff and only stream is passed.
 I could even build a ONVIF client reader on the ARM board and configure it to send email/do something else on trigger event.
+
+# 2021 Update
+
+So I have been running the NVR with 4 cams for a while now, with stock software. I do have a Debian server with Wireguard client in the middle between internet gateway and NVR/CAMs network. NVR/CAMs network doesn't have access to the internet. I have configured to record on motion, however, I noticed that motion detection doesn't always work and I had to switch to 24/7 recording.
+
+I would like to save records 24/7 to my NAS, however, stock sofware (Sofia) allows records to upload only via FTP server and when motion is detected. There is no option for continous record uploading. I haven't figured out what i'm gonna do about it.
+
+Recently I have found 0day vulnerability: https://habr.com/en/post/486856/ and it affected my NVR and CAMs too. I can get root access now without modifying rootfs.
