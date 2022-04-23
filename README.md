@@ -17,8 +17,7 @@ I have dumped the original firmware. You can find mtd block sizes in here as wel
 
 Due some miracle, I was able to retrieve the SDK for this device. It contains kernel, uboot and a few kernel modules sources, many development tutorials regarding the board and it's peripherals and H265/264 library development.
 
-https://mega.nz/#!fegnnCJb!91KLL77uYPvLu-luCYXqPn1txlih-sc-qg0VPm976Lw
-https://mega.nz/#!Sfhk3ASS!eTDEElTqV3Glpv9BgOHIsUMXFwjvoVjv7st77Joe5vI
+https://mega.nz/folder/FE8SnRKD#ZYj_m1jq-uLmPPWvfRpNbw
 
 # Obtaining root
 
